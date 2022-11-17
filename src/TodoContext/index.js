@@ -16,7 +16,7 @@ function TodoProvider(props){
     let findedTodos = []
   
     searchValue.length >= 1 ? 
-    findedTodos = todos.filter(todo => todo.text.toLowerCase().match(searchValue)) :
+    findedTodos = todos.filter(todo => todo.text.toLowerCase().match(searchValue.toLowerCase())) :
     findedTodos = [...todos]
   
     const addTodo = text => {
